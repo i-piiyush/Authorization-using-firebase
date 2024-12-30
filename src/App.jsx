@@ -3,13 +3,14 @@ import { useState } from 'react';
 import './App.css'
 import { TbMessageFilled } from "react-icons/tb";
 import { CiCamera } from "react-icons/ci";
+import Signup from './Signup';
 
 
 function App() {
 
 const [isFollowed,setIsFollowed] = useState(false)
   return (
-    <>
+    <div className='relative'>
     <div className='h-screen w-screen relative flex flex-col  '>
        <div className='bg-gray-300 w-full h-40'></div>
        <div className='bg-gray-600 w-28 h-28 rounded-full absolute top-[13%] left-5'></div>
@@ -27,10 +28,13 @@ const [isFollowed,setIsFollowed] = useState(false)
        <div className=' w-full flex-grow flex  justify-center items-center'> 
         < CiCamera size={"5em"}/>
         
+        
        </div>
+       
     </div>
+    <Signup />
      
-    </>
+    </div>
   )
 }
 
